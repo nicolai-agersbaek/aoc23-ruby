@@ -16,11 +16,11 @@ module Aoc23
     end
 
     class ArgDefs
-      attr_reader :arg_defs
+      attr_reader :items
 
       def initialize(*arg_defs)
-        @arg_defs = arg_defs
-        @arg_defs_by_name = @arg_defs.sort_by!{ |arg_def| arg_def.name }.to_h{ |arg_def| [arg_def.name, arg_def] }
+        @items = arg_defs
+        @items_by_name = @items.sort_by!{ |arg_def| arg_def.name }.to_h{ |arg_def| [arg_def.name, arg_def] }
       end
 
       def self.from_a(arg_defs)
@@ -28,11 +28,11 @@ module Aoc23
       end
 
       def get(index)
-        @arg_defs.fetch(index) {|v| raise IndexError.new "No argument definition found for index: #{index}"}
+        @items.fetch(index) {|v| raise IndexError.new "No argument definition found for index: #{index}"}
       end
 
       def fetch(name)
-        @arg_defs.fetch(name_or_short)
+        @items_by_name.fetch(name)
       end
     end
 

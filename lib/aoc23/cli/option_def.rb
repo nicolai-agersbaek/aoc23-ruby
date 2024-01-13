@@ -26,7 +26,7 @@ module Aoc23
       end
 
       def fetch(name)
-        @option_defs.fetch(name_or_short)
+        @option_defs.fetch(name)
       end
     end
 
