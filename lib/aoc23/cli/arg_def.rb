@@ -8,9 +8,8 @@ module Aoc23
     class ArgDef
       attr_reader :name, :description, :cls
 
-      def initialize(name:, description:"", cls:)
+      def initialize(name:, description:nil, cls:)
         @name = name
-        #@description = description when description != ""
         @description = description
         @cls = cls
       end
@@ -29,7 +28,7 @@ module Aoc23
       end
 
       def get(index)
-        @arg_defs[index]
+        @arg_defs.fetch(index) {|v| raise IndexError.new "No argument definition found for index: #{index}"}
       end
 
       def fetch(name)

@@ -8,7 +8,8 @@ module Aoc23
   class Error < StandardError; end
   
   parser = Cli::ArgsParser.new(
-    Cli::ArgDef.new(name: "task_num", cls: 0.class)
+    Cli::ArgDef.new(name: "task_num", cls: 0.class),
+    Cli::ArgDef.new(name: "input", cls: "".class)
   )
 
   printf "Command-line args: %s\n", parser.parse
