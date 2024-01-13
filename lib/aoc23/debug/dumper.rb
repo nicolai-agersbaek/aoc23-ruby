@@ -4,8 +4,12 @@ module Aoc23
   module Debug
 
     class Dumper
-      def self.dump(val, name="val")
-        printf "%s = %s, %s.class = %s\n", name, val, name, val.class
+      def self.dump(val, name="")
+        if name != ""
+          puts "#{name}: #{val.inspect}"
+        else
+          puts val.inspect
+        end
       end
     end
 

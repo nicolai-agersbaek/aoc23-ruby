@@ -14,7 +14,7 @@ module Aoc23
       }
 
       def initialize(*arg_defs)
-        @arg_defs = arg_defs
+        @arg_defs = Cli::ArgDefs.from_a(arg_defs)
       end
 
       def parse(args = $*)
@@ -23,8 +23,8 @@ module Aoc23
 
       private
       
-      def parse_arg(index,arg)
-        arg_def = @arg_defs[index]
+      def parse_arg(index, arg)
+        arg_def = @arg_defs.get(index)
 
         val = arg_val(arg, arg_def)
 
