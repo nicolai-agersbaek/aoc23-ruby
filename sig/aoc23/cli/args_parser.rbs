@@ -2,22 +2,21 @@ module Aoc23
   module Cli
     class ArgsParser
       @@value_parsers: Hash[Class, ^(String) -> untyped]
-      @num_arg_defs: int
 
+      @num_arg_defs: int
       @option_defs: OptionDefs
 
       attr_reader arg_defs: untyped
       attr_reader option_defs: OptionDefs
 
+      def initialize: (arg_defs: Array[ArgDef], option_defs: Array[OptionDef]) -> void
       def parse: -> Array[untyped]
-
       def parse2: -> Hash[String, untyped]
 
       private
 
-      def arg_val: -> untyped
-
-      def parse_arg: -> [String, untyped]
+      def parse_arg: (index: int, arg: untyped) -> [String, untyped]
+      def arg_val: (arg: untyped, arg_def: ArgDef) -> untyped
     end
   end
 end

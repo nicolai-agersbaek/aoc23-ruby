@@ -2,6 +2,7 @@
 
 require_relative "../debug/dumper"
 require_relative "arg_def"
+require_relative "arg_defs"
 require_relative "option_def"
 require_relative "option_defs"
 require_relative "option"
@@ -14,8 +15,8 @@ module Aoc23
 
       #noinspection RubyClassVariableUsageInspection
       @@value_parsers = {
-        "".class => lambda { |x| x.to_s },
-        0.class => lambda { |x| x.to_i },
+        String => lambda { |x| x.to_s },
+        Integer => lambda { |x| x.to_i },
       }
 
       def initialize(arg_defs:, option_defs:)
