@@ -10,7 +10,7 @@ module Aoc23
       attr_reader option_defs: OptionDefs
 
       def initialize: (arg_defs: Array[ArgDef], option_defs: Array[OptionDef]) -> void
-      def parse: -> Array[untyped]
+      def parse: -> Hash[String, untyped]
       def parse2: -> Hash[String, untyped]
 
       private

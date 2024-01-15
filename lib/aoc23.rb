@@ -10,8 +10,8 @@ module Aoc23
   
   parser = Cli::ArgsParser.new(
     arg_defs: [
-      Cli::ArgDef.new(name: "task_num", cls: 0.class),
-      Cli::ArgDef.new(name: "input", cls: "".class),
+      Cli::ArgDef.new(name: "task_num", cls: Integer),
+      Cli::ArgDef.new(name: "input", cls: String),
     ],
     option_defs: [],
   )

@@ -34,18 +34,17 @@ module Aoc23
 
         arg_defs_and_values = @arg_defs.items.map.with_index{ |arg_def,i| [arg_def, args[i]] }
 
-        resulting_args = []
+        resulting_args = {}
 
         arg_defs_and_values.each { |dv|
           arg_def, arg = dv
 
           if Cli::Option.is_name?(arg) || Cli::Option.is_option?(arg)
             raise ArgumentError.new "Expected argument #{arg_def.name}; got option string: #{arg}"
-          elsif resulting_args.push(arg)
+          else
+            resulting_args.merge!({arg_def.name => arg_val(arg, arg_def)})
           end
         }
-
-        puts resulting_args.inspect
 
         resulting_args
       end
