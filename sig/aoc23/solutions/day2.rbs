@@ -1,0 +1,13 @@
+module Aoc23
+  module Solutions
+    class Day2
+      attr_reader red: int
+      attr_reader green: int
+      attr_reader blue: int
+
+      def initialize: (red: int, green: int, blue: int) -> instance
+      def solve: (input: Array[String]) -> int
+      def solve_line: (line: String) -> int
+    end
+  end
+end
