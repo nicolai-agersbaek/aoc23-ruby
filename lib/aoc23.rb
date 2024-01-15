@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "aoc23/version"
-require_relative "aoc23/cli/parser"
+require_relative "aoc23/cli/args_parser"
 require_relative "aoc23/cli/arg_def"
 require_relative "aoc23/cli/option_def"
 
