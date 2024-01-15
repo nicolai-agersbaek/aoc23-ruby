@@ -8,7 +8,7 @@ module Aoc23
       attr_reader :name, :short_name, :value
 
       def initialize(name:, short_name:, value:)
-        Option.validate_init_args(name, short_name)
+        self.class.validate_init_args(name, short_name)
 
         @name = name
         @short_name = short_name
