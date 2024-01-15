@@ -20,23 +20,23 @@ module Aoc23
         def test_possible?
           data_set = [
             {
-              required_draw: Draw.from_a([0, 0, 0]),
+              max_draw: Draw.from_a([0, 0, 0]),
               expected: true,
             },
             {
-              required_draw: Draw.from_a([1, 1, 1]),
+              max_draw: Draw.from_a([1, 1, 1]),
               expected: true,
             },
             {
-              required_draw: Draw.from_a([2, 1, 1]),
+              max_draw: Draw.from_a([2, 1, 1]),
               expected: false,
             },
             {
-              required_draw: Draw.from_a([1, 2, 1]),
+              max_draw: Draw.from_a([1, 2, 1]),
               expected: false,
             },
             {
-              required_draw: Draw.from_a([1, 1, 2]),
+              max_draw: Draw.from_a([1, 1, 2]),
               expected: false,
             },
           ]

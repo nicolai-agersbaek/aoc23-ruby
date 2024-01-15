@@ -1,0 +1,14 @@
+module Aoc23
+  module Tasks
+    module Day2
+      class Solver
+        attr_reader max_draw: Draw
+
+        def initialize: (Draw) -> instance
+
+        def solve: (line: Array[String]) -> int
+        def solve_line: (line: String) -> int
+      end
+    end
+  end
+end
