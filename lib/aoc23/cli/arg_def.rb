@@ -28,7 +28,7 @@ module Aoc23
       end
 
       def get(index)
-        @items.fetch(index) {|v| raise IndexError.new "No argument definition found for index: #{index}"}
+        @items.fetch(index) {|_| raise IndexError.new "No argument definition found for index: #{index}"}
       end
 
       def fetch(name)
@@ -38,4 +38,3 @@ module Aoc23
 
   end
 end
-  

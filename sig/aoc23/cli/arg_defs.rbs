@@ -1,0 +1,17 @@
+module Aoc23
+  module Cli
+    class ArgDefs
+      @items: Array[ArgDef]
+
+      @items_by_name: Hash[String, ArgDef]
+
+      def self.from_a: -> instance
+
+      attr_reader items: Array[ArgDef]
+
+      def fetch: -> ArgDef
+
+      def get: -> ArgDef
+    end
+  end
+end

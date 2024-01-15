@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = "Advent of Code 2023"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 3.0"
+  spec.required_ruby_version = ">= 3.2"
 
 
   # Specify which files should be added to the gem when it is released.

@@ -11,6 +11,7 @@ module Aoc23
     class ArgsParser
       attr_reader :arg_defs, :option_defs
 
+      #noinspection RubyClassVariableUsageInspection
       @@value_parsers = {
         "".class => lambda { |x| x.to_s },
         0.class => lambda { |x| x.to_i },
@@ -33,19 +34,18 @@ module Aoc23
 
         resulting_args = []
 
-        for dv in arg_defs_and_values
+        arg_defs_and_values.each { |dv|
           arg_def, arg = dv
 
-          if Cli::Option.is_name(arg) || Cli::Option.is_option(arg)
+          if Cli::Option.is_name?(arg) || Cli::Option.is_option?(arg)
             raise ArgumentError.new "Expected argument #{arg_def.name}; got option string: #{arg}"
-          elsif
-            resulting_args.push(arg)
+          elsif resulting_args.push(arg)
           end
-        end
+        }
 
         puts resulting_args.inspect
 
-        return resulting_args
+        resulting_args
       end
 
       def parse2(args = $*)
@@ -63,6 +63,7 @@ module Aoc23
       end
 
       def arg_val(arg, arg_def)
+        #noinspection RubyClassVariableUsageInspection
         value_parser = @@value_parsers.fetch(arg_def.cls)
 
         value_parser.call(arg)
@@ -71,4 +72,3 @@ module Aoc23
 
   end
 end
-  

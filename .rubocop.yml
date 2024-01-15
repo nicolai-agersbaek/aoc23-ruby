@@ -1,13 +1,59 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+  - rubocop-sequel
+
 AllCops:
-  TargetRubyVersion: 3.0
-
-Style/StringLiterals:
-  Enabled: true
-  EnforcedStyle: double_quotes
-
-Style/StringLiteralsInInterpolation:
-  Enabled: true
-  EnforcedStyle: double_quotes
-
+  TargetRubyVersion: 3.2
+  NewCops: enable
+Style/Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
+Style/ModuleFunction:
+  EnforcedStyle: extend_self
+Style/Lambda:
+  EnforcedStyle: literal
+Layout/EmptyLineBetweenDefs:
+  AllowAdjacentOneLineDefs: true
 Layout/LineLength:
-  Max: 120
+  Max: 80
+Metrics/MethodLength:
+  Max: 25
+#  Exclude:
+#    - lib/hydra/runner.rb
+#    - lib/visa_direct/rw3.rb
+#    - lib/omnipay/model/chargeback_status.rb
+#    - spec/**/*
+Metrics/BlockLength:
+  Exclude:
+    - lib/hydra/runner.rb
+    - lib/visa_direct/rw3.rb
+    - spec/**/*
+Metrics/ClassLength:
+  Exclude:
+    - lib/hydra/runner.rb
+    - lib/hydra/truth/adapter/visa_direct/clearing.rb
+    - lib/hydra/closer/settlement.rb
+    - spec/**/*
+Metrics/AbcSize:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Metrics/PerceivedComplexity:
+  Enabled: false
+Metrics/ParameterLists:
+  Exclude:
+    - lib/visa_direct/model/clearing.rb
+Naming/VariableNumber:
+  CheckSymbols: false
+
+
+
+#Style/StringLiterals:
+#  Enabled: true
+#  EnforcedStyle: double_quotes
+#
+#Style/StringLiteralsInInterpolation:
+#  Enabled: true
+#  EnforcedStyle: double_quotes

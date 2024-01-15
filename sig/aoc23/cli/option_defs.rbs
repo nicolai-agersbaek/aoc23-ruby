@@ -1,0 +1,12 @@
+module Aoc23
+  module Cli
+    class OptionDefs
+      @option_defs: Array[OptionDef]
+      @option_defs_by_name: Hash[String, OptionDef]
+
+      def self.from_a: -> instance
+
+      def fetch: -> OptionDef
+    end
+  end
+end

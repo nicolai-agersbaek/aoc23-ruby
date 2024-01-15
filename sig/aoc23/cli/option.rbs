@@ -1,0 +1,29 @@
+module Aoc23
+  module Cli
+    class Option
+      NAME_PATTERN: Regexp
+      PATTERN: Regexp
+
+      def self.as_s: -> String
+
+      def self.from_s: -> self
+
+      def self.is_any_name?: -> bool
+
+      def self.is_name?: -> bool
+      def self.is_option?: -> bool
+
+      def self.is_short_name?: -> bool
+
+      def self.name_from_s: -> String
+
+      def self.short_name_from_s: -> String
+
+      def self.validate_init_args: -> nil
+
+      attr_reader name: String
+      attr_reader short_name: String
+      attr_reader value: String
+    end
+  end
+end
