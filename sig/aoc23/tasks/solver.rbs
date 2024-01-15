@@ -1,0 +1,8 @@
+module Aoc23
+  module Tasks
+    class Solver[T]
+      def solve: (line: Array[String]) -> T
+      def solve_line: (line: String) -> T
+    end
+  end
+end

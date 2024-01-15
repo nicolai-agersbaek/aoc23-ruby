@@ -1,0 +1,9 @@
+module Aoc23
+  module Solutions
+    module Tasks
+      class Solver
+        attr_reader red: untyped
+      end
+    end
+  end
+end

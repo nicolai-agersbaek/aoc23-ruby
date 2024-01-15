@@ -1,0 +1,18 @@
+module Aoc23
+  module Tasks
+    module Day2
+      class Draw
+        def self.from_a: (Array[int]) -> instance
+
+        attr_reader red: int
+        attr_reader green: int
+        attr_reader blue: int
+
+        def initialize: (red: int, green: int, blue: int) -> instance
+
+        def <=: (Draw) -> bool
+        alias lte? <=
+      end
+    end
+  end
+end

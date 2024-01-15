@@ -19,7 +19,7 @@ module Aoc23
 
   day = parser.parse.fetch("day")
 
-  input = File.read("data/day#{day}.txt").split("\n")
+  input = File.readlines("data/day#{day}.txt")
 
   require_relative "aoc23/solutions/day#{day}"
 

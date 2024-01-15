@@ -1,0 +1,18 @@
+module Aoc23
+  module Tasks
+    module Day2
+      class Game
+        def self.from_a: (Enumerable[Array[int]]) -> instance
+
+        attr_reader draws: Enumerable[Draw]
+
+        def initialize: (Enumerable[Draw]) -> instance
+        def <=: (Game) -> bool
+
+        alias lte? <=
+
+        def possible?: (Draw) -> bool
+      end
+    end
+  end
+end
