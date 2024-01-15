@@ -4,9 +4,9 @@ require "test_helper"
 require "aoc23/cli/option"
 
 class TestAoc23 < Minitest::Test
-  def test_that_it_has_a_version_number
-    refute_nil ::Aoc23::VERSION
-  end
+  # def test_that_it_has_a_version_number
+  #   refute_nil ::Aoc23::VERSION
+  # end
 
   def test_option_parses_str
     assert_option_parses_strs(

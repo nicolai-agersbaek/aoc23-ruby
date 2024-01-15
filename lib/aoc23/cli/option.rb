@@ -8,9 +8,7 @@ module Aoc23
       attr_reader :name, :short_name, :value
 
       def initialize(name:, short_name:, value:)
-        validate_init_args(name, short_name)
-        # Option.validate_init_args(name, short_name)
-        # self.validate_init_args(name, short_name)
+        Option.validate_init_args(name, short_name)
 
         @name = name
         @short_name = short_name
@@ -26,12 +24,9 @@ module Aoc23
           raise ArgumentError.new "Unable to parse option string: '#{str}' (using pattern: #{PATTERN})"
         end
 
-        # Debug::Dumper.dump(matches)
         value = matches[:value1] || matches[:value2]
 
         self.new(name: matches[:name], short_name: matches[:short_name], value: value)
-        # self.new(*matches[:name, :short_name, :value])
-        # self.new(*matches)
       end
 
       def self.is_option?(str)
