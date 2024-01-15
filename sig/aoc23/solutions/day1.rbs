@@ -1,0 +1,8 @@
+module Aoc23
+  module Solutions
+    class Day1
+      def solve: (input: Array[String]) -> int
+      def solve_line: (line: String) -> int
+    end
+  end
+end
