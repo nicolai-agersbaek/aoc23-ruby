@@ -4,9 +4,13 @@ module Aoc23
       @option_defs: Array[OptionDef]
       @option_defs_by_name: Hash[String, OptionDef]
 
-      def self.from_a: -> instance
+      def initialize: (*OptionDef) -> void
 
-      def fetch: -> OptionDef
+      def self.from_a: (Array[OptionDef]) -> instance
+
+      def fetch: (String) -> OptionDef
+
+      include Enumerable[class]
     end
   end
 end

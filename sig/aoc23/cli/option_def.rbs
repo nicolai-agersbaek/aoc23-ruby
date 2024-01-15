@@ -1,6 +1,8 @@
 module Aoc23
   module Cli
     class OptionDef
+      def initialize: (name: String, description: String?, cls: String) -> void
+
       attr_reader name: String
       attr_reader description: String?
       attr_reader cls: String

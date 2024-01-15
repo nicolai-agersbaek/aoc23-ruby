@@ -3,6 +3,7 @@
 require_relative "../debug/dumper"
 require_relative "arg_def"
 require_relative "option_def"
+require_relative "option_defs"
 require_relative "option"
 
 module Aoc23
