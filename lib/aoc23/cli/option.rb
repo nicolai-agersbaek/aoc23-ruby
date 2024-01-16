@@ -144,8 +144,8 @@ module Aoc23
         str.to_s
       end
 
-      NAME_PATTERN = /^-?-(?<name>[a-z0-9]+)$/
-      PATTERN = /^((--(?<name>[a-z0-9]+))|(-(?<short_name>[a-z0-9]+)))(((\s|=)(("(?<value1>[^"]+)")|(?<value2>.+)))?)$/
+      NAME_PATTERN = /^-?-(?<name>[a-z0-9]+)$/.freeze
+      PATTERN = /^((--(?<name>[a-z0-9]+))|(-(?<short_name>[a-z0-9]+)))(((\s|=)(("(?<value1>[^"]+)")|(?<value2>.+)))?)$/.freeze
     end
 
   end
