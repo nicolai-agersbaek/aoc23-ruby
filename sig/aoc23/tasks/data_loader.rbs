@@ -1,0 +1,12 @@
+module Aoc23
+  module Tasks
+    class DataLoader
+      @data_dir: String
+
+      attr_reader data_dir: String
+
+      def initialize: (data_dir: String) -> instance
+      def load_data: (day: int, task_num: int) -> Array[String]
+    end
+  end
+end

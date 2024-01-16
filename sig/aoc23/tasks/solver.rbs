@@ -1,8 +1,10 @@
 module Aoc23
   module Tasks
-    class Solver[T]
-      def solve: (line: Array[String]) -> T
-      def solve_line: (line: String) -> T
+    module Solver[T]
+      def self.default: -> self
+
+      def solve: (Array[String]) -> T
+      def solve_line: (String) -> T
     end
   end
 end

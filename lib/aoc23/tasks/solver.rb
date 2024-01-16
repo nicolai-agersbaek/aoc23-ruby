@@ -3,15 +3,19 @@
 module Aoc23
   module Tasks
 
-    class Solver
+    module Solver
 
-      #noinspection RubyUnusedLocalVariable
-      def solve(lines:)
+      def self.default
         raise NoMethodError
       end
 
       #noinspection RubyUnusedLocalVariable
-      def solve_line(line:)
+      def solve(input)
+        raise NoMethodError
+      end
+
+      #noinspection RubyUnusedLocalVariable
+      def solve_line(line)
         raise NoMethodError
       end
 

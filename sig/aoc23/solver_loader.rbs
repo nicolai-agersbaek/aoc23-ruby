@@ -1,0 +1,5 @@
+module Aoc23
+  class SolverLoader
+    def load_solver: (day: int) -> Tasks::Solver[untyped]
+  end
+end
