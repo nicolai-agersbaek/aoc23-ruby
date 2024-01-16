@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative "../../../test_helper"
-require "aoc23/tasks/day2/solver"
+require_relative "../../../../test_helper"
+require "aoc23/tasks/day2/part1/solver"
 require "aoc23/tasks/day2/game"
 require "aoc23/tasks/day2/draw"
 

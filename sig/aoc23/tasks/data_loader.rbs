@@ -6,7 +6,7 @@ module Aoc23
       attr_reader data_dir: String
 
       def initialize: (data_dir: String) -> instance
-      def load_data: (day: int, task_num: int) -> Array[String]
+      def load_data: (day: int, part: int) -> Array[String]
     end
   end
 end

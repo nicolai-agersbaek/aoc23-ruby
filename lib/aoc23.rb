@@ -15,7 +15,7 @@ module Aoc23
   parser = Cli::ArgsParser.new(
     arg_defs: [
       Cli::ArgDef.new(name: "day", cls: Integer),
-      # Cli::ArgDef.new(name: "task_num", cls: Integer, default_value: 1),
+      # Cli::ArgDef.new(name: "part", cls: Integer, default_value: 1),
     ],
     option_defs: [],
   )

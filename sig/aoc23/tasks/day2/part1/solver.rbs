@@ -1,0 +1,25 @@
+module Aoc23
+  module Tasks
+    module Day2
+      module Part1
+
+        class Solver
+          DEFAULT: Solver
+
+          include Tasks::Solver[int]
+
+          attr_reader max_draw: Draw
+
+          def initialize: (Draw) -> instance
+
+          def self.default: -> instance
+
+          def parse_draw_match: (MatchData?) -> int
+          def parse_draws_string: (String) -> Game
+          def parse_draw_str: (String) -> Draw
+        end
+
+      end
+    end
+  end
+end
