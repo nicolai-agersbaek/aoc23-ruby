@@ -13,11 +13,11 @@ module Aoc23
         end
 
         def self.from_a(draws)
-          new(*draws.map { |draw| Draw.from_a(draw) })
+          new(draws.map { |draw| Draw.from_a(draw) })
         end
 
-        def possible?(required_draw)
-          @draws.all? { | draw | required_draw <= draw }
+        def possible?(max_draw)
+          @draws.all? { | draw | draw <= max_draw }
         end
 
         def <=(other)
@@ -26,6 +26,12 @@ module Aoc23
         end
 
         alias lte? <=
+
+        def to_s
+          str = @draws.map(&:to_s).join(", ")
+
+          "Game(#{str})"
+        end
 
       end
 

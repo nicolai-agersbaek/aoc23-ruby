@@ -20,23 +20,30 @@ module Aoc23
         end
 
         def solve_line(line)
-          # Game 1: 1 red, 2 green, 3 blue; 4 red, 5 green, 6 blue
-          matches = line.match(/^Game (?<game_id>\d+): (?<draws>(?<draw>(\d+ red, \d+ green, \d+ blue))(; )?)/)
-          #game_id = line.match(/^Game (?<id>\d+):/)[:id]
+          matches = line.match(/^Game (?<game_id>\d+): (?<draws>.+)/)
 
-          game_id = matches[:game_id]
-          draws = matches[:draws]
-          draw = matches[:draw]
+          game_id = matches[:game_id].to_i
+          game = parse_draws_string(matches[:draws])
 
-          puts "#{line}:\n"
-          puts "game_id: #{game_id}\n"
-          puts "draws: #{draws}\n"
-          #puts "draw: #{draw}\n"
+          game.possible?(@max_draw) ? game_id : 0
+        end
 
-          #puts "#{game_id} < #{line}"
+        def parse_draws_string(draws_str)
+          draws = draws_str.split(";").map { |draw_str| parse_draw_str(draw_str) }
 
-          0
-          #game_id.to_i
+          Game.new draws
+        end
+
+        def parse_draw_str(draw_str)
+          red = parse_draw_match draw_str.match(/(\d+ red)/)
+          green = parse_draw_match draw_str.match(/(\d+ green)/)
+          blue = parse_draw_match draw_str.match(/(\d+ blue)/)
+
+          Draw.new(red: red, green: green, blue: blue)
+        end
+
+        def parse_draw_match(match)
+          !match.nil? ? match[0].to_i : 0
         end
 
       end

@@ -19,7 +19,7 @@ module Aoc23
             raise ArgumentError.new "values must be an Array[int] of size 3"
           end
 
-          new(*values)
+          new(red: values[0], green: values[1], blue: values[2])
         end
 
         def <=(other)
@@ -27,6 +27,10 @@ module Aoc23
         end
 
         alias lte? <=
+
+        def to_s
+          "Draw(#{@red}, #{@green}, #{@blue})"
+        end
 
       end
 

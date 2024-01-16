@@ -6,8 +6,16 @@ module Aoc23
 
         def initialize: (Draw) -> instance
 
+        def parse_draw_str: (String) -> Draw
+
         def solve: (line: Array[String]) -> int
         def solve_line: (line: String) -> int
+
+        private
+
+        def parse_draw_match: (MatchData?) -> int
+
+        def parse_draws_string: (String) -> Game
       end
     end
   end
