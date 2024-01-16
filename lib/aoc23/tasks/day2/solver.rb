@@ -43,7 +43,7 @@ module Aoc23
         end
 
         def parse_draw_match(match)
-          !match.nil? ? match[0].to_i : 0
+          (match || [0])[0].to_i
         end
 
       end
